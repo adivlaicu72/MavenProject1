@@ -86,6 +86,35 @@ public class SeleniumLocators extends BaseTest{
 	 * 
 	 */
 	
+	@Test(priority=6)
+	public void nameLocator() throws InterruptedException {
+		
+		WebElement commentBox = browser.findElement(By.name("comment"));
+		
+		commentBox.sendKeys("My super message");
+		Thread.sleep(3000);
+		commentBox.clear();//elimina textul dintr-un element care primeste input
+		Thread.sleep(3000);
+		commentBox.sendKeys("Alt mesaj");
+
+	}
+	
+	@Test(priority=7)
+	public void cssSelectorLocator() {
+		
+		browser.findElement(By.cssSelector("input[name='author']")).sendKeys("Test");
+		
+	}
+	
+	@Test(priority=7)
+	public void xpathLocator() {
+		
+		browser.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
+		
+	}
+	
+	
+	
 	
 
 }
