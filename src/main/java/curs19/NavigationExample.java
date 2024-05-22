@@ -17,6 +17,8 @@ public class NavigationExample extends BaseTest{
 		Thread.sleep(3000);
 		browser.navigate().refresh();
 		
+		System.err.println("Print ceva in red");
+		
 		
 	}
 
