@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import selenium.utils.BaseTest;
 
-public class Homework2 extends BaseTest{
+public class Homework_c17_2 extends BaseTest{
 	
 	@Test
 	public void findTheForestBook() throws InterruptedException{
@@ -31,6 +31,7 @@ public class Homework2 extends BaseTest{
 		      assertTrue(forestBook.isDisplayed());	      
 		      }
 	
+		Thread.sleep(1000);
 		browser.findElement(By.cssSelector("div[aria-hidden='false'] a[href='the-forest']")).click();  
 		
 		//verific url ca este url cartii 
